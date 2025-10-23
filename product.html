@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3 Finery - Elevating Everyday Luxury</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+      rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logos/t3-minimal.svg">
+  </head>
+
+  <body>
+    <!-- Luxury Cursor -->
+    <div class="luxury-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+          <span class="logo-minimal">T3</span>
+        </a>
+
+        <!-- Main Menu -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link luxury-underline">Home</a>
+          <a href="shop.html" class="nav-link luxury-underline">Collection</a>
+          <a href="about.html" class="nav-link luxury-underline">Story</a>
+          <a href="contact.html" class="nav-link luxury-underline">Contact</a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="nav-actions">
+          <!-- Search -->
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search collection...">
+          </div>
+
+          <!-- Cart -->
+          <div class="cart-icon" onclick="toggleCartDropdown()">
+            <span class="cart-count">0</span>
+          </div>
+
+          <!-- Auth -->
+          <div class="auth-section">
+            <button class="auth-btn" id="auth-button">Account</button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown">
+      <div class="cart-header">
+        <h3>Your Collection</h3>
+        <span class="close-cart">×</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total"></div>
+      <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+        Continue to Checkout
+      </button>
+    </div>
+
+        <!-- Footer -->
+    <footer class="luxury-footer">
+      <div class="footer-container">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <span class="logo-full luxury-underline">T3 FINERY</span>
+          <p class="footer-tagline">Elevating Everyday Luxury through bespoke craftsmanship and timeless design.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <a href="shop.html" class="footer-link">Collection</a>
+          <a href="about.html" class="footer-link">Our Story</a>
+          <a href="contact.html" class="footer-link">Appointments</a>
+          <a href="track-order.html" class="footer-link">Track Order</a>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="#" class="footer-link">Custom Tailoring</a>
+          <a href="#" class="footer-link">Alterations</a>
+          <a href="#" class="footer-link">Personal Styling</a>
+          <a href="#" class="footer-link">Care Instructions</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Nakuru, Kenya</p>
+          <p>+254 700 000 000</p>
+          <p>atelier@t3finery.com</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 T3 Finery. Crafted with excellence.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/main.js"></script>
+    </body>
+ </html>

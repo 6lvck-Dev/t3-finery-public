@@ -1,0 +1,8 @@
+# Ignore sensitive files
+assets/js/firebase-config.js
+
+# Ignore system/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.env

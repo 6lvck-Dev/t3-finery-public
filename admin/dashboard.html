@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Center - T3 Finery Admin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/shared.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+  </head>
+
+  <body class="admin-dashboard">
+    <!-- Navigation Sidebar -->
+    <nav class="admin-sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">
+          <span class="logo-icon">T3</span>
+          <span class="logo-text">FINERY</span>
+        </div>
+        <div class="admin-status">
+          <div class="status-indicator online"></div>
+          <span>Admin Online</span>
+        </div>
+      </div>
+
+      <div class="sidebar-nav">
+        <div class="nav-section">
+          <div class="section-label">CORE</div>
+          <a href="#dashboard" class="nav-item active" data-page="dashboard">
+            <span class="nav-icon">📊</span>
+            <span class="nav-text">Dashboard</span>
+          </a>
+          <a href="#products" class="nav-item" data-page="products">
+            <span class="nav-icon">🛍️</span>
+            <span class="nav-text">Products</span>
+            <span class="nav-badge">12</span>
+          </a>
+          <a href="#orders" class="nav-item" data-page="orders">
+            <span class="nav-icon">📦</span>
+            <span class="nav-text">Orders</span>
+            <span class="nav-badge">5</span>
+          </a>
+          <a href="#customers" class="nav-item" data-page="customers">
+            <span class="nav-icon">👥</span>
+            <span class="nav-text">Customers</span>
+            <span class="nav-badge">47</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="section-label">CONTENT</div>
+          <a href="#collections" class="nav-item" data-page="collections">
+            <span class="nav-icon">🎨</span>
+            <span class="nav-text">Collections</span>
+          </a>
+          <a href="#analytics" class="nav-item" data-page="analytics">
+            <span class="nav-icon">📈</span>
+            <span class="nav-text">Analytics</span>
+          </a>
+          <a href="#marketing" class="nav-item" data-page="marketing">
+            <span class="nav-icon">🎯</span>
+            <span class="nav-text">Marketing</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="section-label">SYSTEM</div>
+          <a href="#settings" class="nav-item" data-page="settings">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-text">Settings</span>
+          </a>
+          <a href="#support" class="nav-item" data-page="support">
+            <span class="nav-icon">💬</span>
+            <span class="nav-text">Support</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <img src="../assets/images/avatar.jpg" alt="Admin"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="avatar-fallback">CD</div>
+          </div>
+          <div class="user-info">
+            <div class="user-name">Creative Director</div>
+            <div class="user-role">Administrator</div>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutButton">
+          <span class="logout-icon">🚪</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      <!-- Header -->
+      <header class="admin-header">
+        <div class="header-left">
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <h1 class="page-title">Command Center</h1>
+        </div>
+        <div class="header-right">
+          <div class="header-actions">
+            <button class="action-btn notification-btn">
+              <span class="action-icon">🔔</span>
+              <span class="notification-badge">3</span>
+            </button>
+            <button class="action-btn quick-add-btn">
+              <span class="action-icon">➕</span>
+              <span>Quick Add</span>
+            </button>
+            <button class="action-btn search-btn">
+              <span class="action-icon">🔍</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="admin-content" id="adminContent">
+        <!-- Stats Overview -->
+        <section class="stats-grid">
+          <div class="stat-card revenue">
+            <div class="stat-icon">💰</div>
+            <div class="stat-content">
+              <div class="stat-value">$12,427</div>
+              <div class="stat-label">Total Revenue</div>
+              <div class="stat-trend positive">+12.4%</div>
+            </div>
+          </div>
+          <div class="stat-card orders">
+            <div class="stat-icon">📦</div>
+            <div class="stat-content">
+              <div class="stat-value">47</div>
+              <div class="stat-label">Orders</div>
+              <div class="stat-trend positive">+8.2%</div>
+            </div>
+          </div>
+          <div class="stat-card customers">
+            <div class="stat-icon">👥</div>
+            <div class="stat-content">
+              <div class="stat-value">1,284</div>
+              <div class="stat-label">Customers</div>
+              <div class="stat-trend positive">+5.7%</div>
+            </div>
+          </div>
+          <div class="stat-card products">
+            <div class="stat-icon">🛍️</div>
+            <div class="stat-content">
+              <div class="stat-value">12</div>
+              <div class="stat-label">Products</div>
+              <div class="stat-trend">Active</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+          <h2 class="section-title">Quick Actions</h2>
+          <div class="actions-grid">
+            <button class="action-card" data-action="add-product">
+              <div class="action-icon">➕</div>
+              <div class="action-text">Add Product</div>
+              <div class="action-desc">Create new product listing</div>
+            </button>
+            <button class="action-card" data-action="view-orders">
+              <div class="action-icon">📦</div>
+              <div class="action-text">Process Orders</div>
+              <div class="action-desc">5 pending orders</div>
+            </button>
+            <button class="action-card" data-action="analytics">
+              <div class="action-icon">📈</div>
+              <div class="action-text">View Analytics</div>
+              <div class="action-desc">Performance insights</div>
+            </button>
+            <button class="action-card" data-action="inventory">
+              <div class="action-icon">📊</div>
+              <div class="action-text">Inventory Check</div>
+              <div class="action-desc">Stock management</div>
+            </button>
+          </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="recent-activity">
+          <div class="activity-header">
+            <h2 class="section-title">Recent Activity</h2>
+            <button class="view-all-btn">View All</button>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">🛍️</div>
+              <div class="activity-content">
+                <div class="activity-title">New product added</div>
+                <div class="activity-desc">"Luxury Silk Dress" was added to collection</div>
+                <div class="activity-time">2 minutes ago</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">💰</div>
+              <div class="activity-content">
+                <div class="activity-title">Order completed</div>
+                <div class="activity-desc">Order #TF-2847 marked as delivered</div>
+                <div class="activity-time">1 hour ago</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">👥</div>
+              <div class="activity-content">
+                <div class="activity-title">New customer registered</div>
+                <div class="activity-desc">Sarah Johnson joined T3 Finery</div>
+                <div class="activity-time">3 hours ago</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Quick Add Modal -->
+    <div class="modal-overlay" id="quickAddModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Quick Add Product</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="quick-add-form" id="quickAddForm">
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" class="form-input" placeholder="Enter product name" required>
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input type="number" class="form-input" placeholder="0.00" step="0.01" required>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select class="form-select" required>
+                <option value="">Select category</option>
+                <option value="dresses">Dresses</option>
+                <option value="accessories">Accessories</option>
+                <option value="footwear">Footwear</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-secondary modal-close">Cancel</button>
+              <button type="submit" class="btn-primary">Add Product</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Processing...</div>
+      </div>
+    </div>
+
+    <script type="module" src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/shared.js"></script>
+    <script type="module" src="../assets/js/auth.js"></script>
+    <script type="module" src="../assets/js/admin.js"></script>
+  </body>
+
+</html>
