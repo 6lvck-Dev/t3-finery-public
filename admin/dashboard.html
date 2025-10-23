@@ -270,7 +270,12 @@
       </div>
     </div>
 
-    <script type="module" src="../assets/js/firebase-config.js"></script>
+    <script type="module">
+      import { db, storage } from '../assets/js/firebase-config.js';
+      // Make Firebase available globally
+      window.db = db;
+      window.storage = storage;
+    </script>
     <script src="../assets/js/shared.js"></script>
     <script type="module" src="../assets/js/auth.js"></script>
     <script type="module" src="../assets/js/admin.js"></script>
